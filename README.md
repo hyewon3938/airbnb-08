@@ -13,7 +13,7 @@
 <br>
 
 ## 🏡협업방식 
-- 커밋 컨벤션, 브랜치, 이슈, PR 형식과 스크럼과 회고 시간 등 그라운드 룰을 정한다
+- 팀원이 함께 커밋 컨벤션, 브랜치, 이슈, PR 형식과 스크럼과 회고 시간 등 그라운드 룰을 정한다
 - 일주일마다 한주의 게획을 짜고 그에 맞춰 개발 → [스프레드시트 링크](https://docs.google.com/spreadsheets/d/1HEQ4SfGuWop1xVdlVWgoPRmF0UA2lLrkM6px26G51yg/edit#gid=0)
 - **페어프로그래밍**으로 함께 개발, 한 대의 컴퓨터로 한명이 코드를 말해주면 나머지 한명이 코드를 작성하는 방식으로 30분씩 번갈아 가며 진행
 - 온라인으로 진행할 경우 **행아웃** 화상채팅과 VSCode의 **Live Share**를 이용하여 페어프로그래밍
@@ -36,11 +36,23 @@
 ## 🏡사용 기술 및 기능 구현
 → ``` React, Redux, axios, styled-component, material-ui, datepicker-react, dotenv, Webpack ```
 - Webpack의 alias를 사용하여 import문을 간결하게 작성  
-- loading indicator 와 skeleton loading으로 사용자경험 증진 
-- Intersection Observer를 이용해 2000개가 넘는 숙소정보를 부분적으로 로딩하는 Lazy Loading을 구현하여 로딩 속도 개선 
-- styled-component의 글로벌 스타일에 테마를 적용해 스타일 관리
 - 커스텀 훅을 사용하여 서버로부터 데이터 패치 
-- 데이터로 그래프를 그리고, material-ui의 Slider를 이용해 선택된 범위 내의 그래프 색상을 변경하는 UI 제작
+- styled-component의 글로벌 스타일에 테마를 적용해 스타일 관리
+- **Intersection Observer**를 이용해 2000개가 넘는 숙소정보를 부분적으로 로딩하는 **Lazy Loading**을 구현하여 로딩 속도 개선 
+- **Loading Indicator** 와 **Skeleton Loading**으로 사용자경험 증진 
+- 데이터로 그래프를 그리고, material-ui의 Slider를 이용해 선택된 범위 내의 그래프 색상을 변경하는 **UI 제작**
+
+<br>
+<br>
+
+👁**Skeleton Loading & Loading Indicator**
+<p><img src="https://user-images.githubusercontent.com/58355499/99177870-e2bf8000-2750-11eb-9d20-3706255601cd.gif" width="620px"/></p>
+
+👁**Lazy Loading** 
+<p><img src="https://user-images.githubusercontent.com/58355499/99176672-a559f300-274e-11eb-8df8-be932a76c59f.gif"/></p>
+
+👁**슬라이더와 그래프 UI**  
+<p><img src="https://user-images.githubusercontent.com/58355499/99176721-a8ed7a00-274e-11eb-8791-d479f021b2f0.gif"/></p>
 
 <br>
 <br>
@@ -55,7 +67,7 @@
 - 서비스의 상태관리는 redux를 이용해서 하는데, 사용한 달력 라이브러리 ```datepicker-react```가 context API를 사용하고 있었다. 스타일 커스텀은 성공했지만, 상태관리를 redux로 바꾸지는 못 했다. 결국 redux와 context API를 함께 사용하게 되었는데 한 가지만 사용할 수 있는 방법을 생각해봐야겠다. 
 <br>
 
-- useEffect를 사용해 비동기 통신을 해야할 때 useFetch 커스텀 hook이 불려지지 않았다. useEffect내에서 또 다시 useEffect를 사용하는 커스텀 훅을 불러서 생기는 문제 같다. 커스텀 hook에서 바로 데이터를 return 받지 않고, redux에 response 값을 저장한 뒤, useSelector로 가져오는 방식을 사용하면 useEffect를 사용할 수 있을 것 같다. 비동기 통신을 좀 더 공부해봐야겠다.  
+- useEffect를 사용해 비동기 통신을 해야할 때 useFetch 커스텀 hook이 불려지지 않았다. useEffect내에서 또 다시 useEffect를 사용하는 커스텀 훅을 불러서 생기는 문제 같다. 커스텀 hook에서 바로 데이터를 return 받지 않고, store에 response 값을 저장한 뒤, useSelector로 가져오는 방식을 사용하면 useEffect를 사용할 수 있을 것 같다. 비동기 통신 방식을 더 고민해봐야겠다.   
 <br> 
 
 - 이번 프로젝트는 이전에 했던 다른 프로젝트에 비해 시간을 잘 맞춘 것 같다. 하지만 이번에도 역시나 마지막으로 갈수록 급하게 코드를 작성했는데 시간 관리에 조금 더 신경써야할 것 같다. 
