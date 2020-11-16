@@ -70,6 +70,12 @@
 - useEffect를 사용해 비동기 통신을 해야할 때 useFetch 커스텀 hook이 불려지지 않았다. useEffect내에서 또 다시 useEffect를 사용하는 커스텀 훅을 불러서 생기는 문제 같다. 커스텀 hook에서 바로 데이터를 return 받지 않고, store에 response 값을 저장한 뒤, useSelector로 가져오는 방식을 사용하면 useEffect를 사용할 수 있을 것 같다. 비동기 통신 방식을 더 고민해봐야겠다.   
 <br> 
 
+- UX에 좋지 않은 alert창...alert창은 사용자가 확인 버튼을 직접 클릭해줘야 하기 때문에 불편함이 있다. 사용자에게 메시지를 보여줘야할 경우 필터 검색 아래에 확인 버튼이 없는 메시지를 띄워 보여준다거나, 메시지를 아예 보여주지 않고 날짜를 선택하지 않았을 경우 1박, 인원을 선택하지 않은 경우에는 2명정도로 기본값을 넣어 검색 결과를 보여주는 게 더 편리할 것 같다.
+<p align="center"><img src="https://user-images.githubusercontent.com/58355499/99214862-abb2a280-2814-11eb-921e-230f18e97076.jpg" width="30%"/><img src="https://user-images.githubusercontent.com/58355499/99214865-aead9300-2814-11eb-8c35-b938d916664c.jpg" width="30%"/><img src="https://user-images.githubusercontent.com/58355499/99214869-b0775680-2814-11eb-9acd-bf17785297d8.jpg" width="30%"/></p>
+  
+
+<br>
+
 - 이번 프로젝트는 이전에 했던 다른 프로젝트에 비해 시간을 잘 맞춘 것 같다. 하지만 이번에도 역시나 마지막으로 갈수록 급하게 코드를 작성했는데 시간 관리에 조금 더 신경써야할 것 같다. 
 <br>
 
