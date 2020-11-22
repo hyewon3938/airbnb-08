@@ -39,6 +39,7 @@
 - 커스텀 훅을 사용하여 서버로부터 데이터 패치 
 - styled-component의 글로벌 스타일에 테마를 적용해 스타일 관리
 - **Intersection Observer**를 이용해 2000개가 넘는 숙소정보를 부분적으로 로딩하는 **Lazy Loading**을 구현하여 로딩 속도 개선 
+  - ['[최적화] lazy loading 레이지 로딩으로 로딩 속도를 개선해보자' 블로그 포스팅 링크](https://velog.io/@hyewon3938/%EC%B5%9C%EC%A0%81%ED%99%94-lazy-loading-%EB%A0%88%EC%9D%B4%EC%A7%80-%EB%A1%9C%EB%94%A9%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EB%94%A9-%EC%86%8D%EB%8F%84-%EA%B0%9C%EC%84%A0)
 - **Loading Indicator** 와 **Skeleton Loading**으로 사용자경험 증진 
 - 데이터로 그래프를 그리고, material-ui의 Slider를 이용해 선택된 범위 내의 그래프 색상을 변경하는 **UI 제작**
 
